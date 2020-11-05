@@ -36,7 +36,6 @@ $ echo "$(minikube ip) hello.world" | sudo tee -a /etc/hosts
 
 #Run below command to check that the books DB does not exist.
 $ POD_NAME=$(kubectl get pod -l service=postgres -o jsonpath="{.items[0].metadata.name}")
-
 $ kubectl exec $POD_NAME --stdin --tty -- psql -U sample
 
 psql (12.1)
@@ -57,7 +56,7 @@ sample=# \l
 (5 rows)
 
 sample=#
-
+--------------------------------
 
 
 
@@ -86,7 +85,7 @@ sample=# \l
 (5 rows)
 
 sample=#
-
+------------------------------------
 
 
 
