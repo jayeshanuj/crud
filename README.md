@@ -1,4 +1,4 @@
-# crud
+# CRUD
 NOTE: I am not able to varify the working of ingress as i am working with docker edge and not minikube.
 
 
