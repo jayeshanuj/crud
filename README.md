@@ -1,31 +1,31 @@
 # crud
-<!--NOTE: I am not able to varify the working of ingress as i am working with docker edge and not minikube.
+NOTE: I am not able to varify the working of ingress as i am working with docker edge and not minikube.
 
 
-#Deployment Steps
+# Deployment Steps
 
-<!--Clone the repository-->
-$git clone https://github.com/jayeshanuj/crud.git
+# Clone the repository
+$ git clone https://github.com/jayeshanuj/crud.git
 
-<!--go to crud directory-->
-$cd crud
+# go to crud directory
+$ cd crud
 
-<!--provide executable permissions to deploy.sh-->
-$chmod 755 deploy.sh
+# provide executable permissions to deploy.sh
+$ chmod 755 deploy.sh
 
-<!--Run the script deploy.sh. It will apply the k8s manifest files.-->
-$./deploy.sh
+# Run the script deploy.sh. It will apply the k8s manifest files.
+$ ./deploy.sh
 
-<!--Check that all the k8s objects are deployed correctly.-->
-$kubectl get all;kubectl get secrets;kubectl get pv;kubectl get pvc.
+# Check that all the k8s objects are deployed correctly.
+$ kubectl get all;kubectl get secrets;kubectl get pv;kubectl get pvc.
 
-<!--Enable the ingress addon-->
-$minikube addons enable ingress
+# Enable the ingress addon 
+$ minikube addons enable ingress
 
 
 
-<!--Next, you need to update your /etc/hosts file to route requests from the host we defined, hello.world, to the Minikube instance.
-Add an entry to /etc/hosts:-->
+# you need to update your /etc/hosts file to route requests from the host we defined, hello.world, to the Minikube instance.
+# Add an entry to /etc/hosts:
 
 $ echo "$(minikube ip) hello.world" | sudo tee -a /etc/hosts
 
