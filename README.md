@@ -32,7 +32,7 @@ $ echo "$(minikube ip) hello.world" | sudo tee -a /etc/hosts
 ---------------------------------------------------------------------------
 
 
-# Post steps
+# Post steps and Varification steps
 
 #Run below command to check that the books DB does not exist.
 $ POD_NAME=$(kubectl get pod -l service=postgres -o jsonpath="{.items[0].metadata.name}")
@@ -43,6 +43,7 @@ psql (12.1)
 Type "help" for help.
 
 sample=# \l
+
                                  List of databases
    Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges
 -----------+----------+----------+------------+------------+-----------------------
@@ -71,6 +72,7 @@ psql (12.1)
 Type "help" for help.
 
 sample=# \l
+
                                  List of databases
    Name    |  Owner   | Encoding |  Collate   |   Ctype    |   Access privileges
 -----------+----------+----------+------------+------------+-----------------------
@@ -103,6 +105,7 @@ psql (12.1)
 Type "help" for help.
 
 sample=# \c books
+
 You are now connected to database "books" as user "sample".
 books=# select * from books;
 
